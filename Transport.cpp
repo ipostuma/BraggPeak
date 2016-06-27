@@ -15,3 +15,7 @@ void Transport::Run(float precision){
   }
   m_nt->Fill(0,m_x);
 }
+
+TNtuple* Transport::GetNTuple(){
+  return m_nt;
+};

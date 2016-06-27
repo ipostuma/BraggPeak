@@ -4,10 +4,12 @@ class Transport{
 public:
   Transport(float E,int z, float m, int Z, int A, float p){m_E=E;m_x=0;m_z=z;m_m=m;m_Z=Z;m_A=A;m_p=p;};
   ~Transport(){
-    delete[] m_nt;
+    delete m_nt;
   };
 
   void Run(float precision);
+
+  TNtuple* GetNTuple();
 private:
   //Projectile information
   float m_E;
